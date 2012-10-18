@@ -1,0 +1,160 @@
+﻿
+/*
+
+Main styles
+--------------
+
+Colors used:
+
+orange:			#D44413
+dark orange:	#C03D14
+light grey:		#DDDDDD
+hero-unit:		#F5F5F5 (whiteSmoke)
+
+*/
+
+/* Global defaults */
+
+b {
+	font-weight: 700; /* Ubuntu font uses 700 instead of the typical 600 */
+}
+section {
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+/* body - the white background content wrapper */
+.container > .content  { 
+	padding: 60px 20px 40px; /* 60px top to make the container go all the way to the bottom of the topbar */
+	margin:  0 -20px; /* negative indent the amount of the padding to maintain the grid system (left and right only) */
+	-webkit-border-radius:  0 0 6px 6px;
+	-moz-border-radius:  0 0 6px 6px;
+	-o-border-radius:  0 0 6px 6px;
+	border-radius:  0 0 6px 6px;
+	-webkit-box-shadow:  0 1px 2px rgb(221,221,221);
+	-moz-box-shadow:  0 1px 2px rgb(221,221,221);
+	-o-box-shadow:  0 1px 2px rgb(221,221,221);
+	box-shadow:  0 1px 2px #DDDDDD; /* #DDDDDD is hex for rgb(221,221,221) */
+}
+
+/* collapsed navigation */ 
+.navbar .nav-collapse.collapse > .nav li > a:hover,
+.navbar .nav-collapse.collapse > .nav li > a:active {
+	background: #C03D14; /* same as nav element :hover */
+}
+.navbar {
+	z-index: 1180;
+}
+
+/* centered three column row */
+.row.centered {
+	margin: 0 -15px; /* center div without breaking the grid system */
+}
+.row.centered .span4 .col-wrap {
+	padding-right: 29px; /* spacing (same as .span4 margin-left minus 1px) */
+	border-right: 1px solid #DDDDDD;
+}
+.row.centered .span4:last-child .col-wrap {
+	border-right-color: #FFFFFF; /* not visible but required to maintain alignment */
+}
+
+/* footer */
+footer {
+	padding: 10px 0;
+	text-align: center; /* center align it with the container */
+}
+
+/* pages (use "#page-[page-name]", as defined in "index.php") */
+
+#page-default .hero-unit {
+	background: url('../images/heronodes.png') right center no-repeat whiteSmoke;
+}
+
+
+#page-404 {
+	padding: 150px 0;
+	text-align: center;
+}
+
+
+/*
+
+Media queries
+----------------
+
+*/
+
+@media (min-width: 1200px) {
+	
+	.navbar-fixed-top .container,
+	.navbar-fixed-bottom .container {
+		width: 1170px;
+	}
+	
+}
+
+@media (max-width: 1200px) {
+	
+	.hero-unit {
+		padding: 40px 60px;
+	}
+	
+}
+
+@media (max-width: 960px) {
+	
+	.container > .content  {
+		padding-top: 20px;
+	}
+	.navbar-fixed-top {
+		margin-bottom: 0;
+	}
+	.hero-unit {
+		padding: 20px 40px;
+	}
+	
+}
+
+@media (max-width: 768px) {
+
+	.hero-unit {
+		padding: 20px;
+	}
+	.hero-unit h1 {
+		font-size: 50px;
+	}
+	
+	.col-wrap {
+		margin-left: 20px;
+	}
+
+}
+
+@media (max-width: 450px) {
+	
+	.hero-unit h1 {
+		font-size: 40px;
+	}
+	.hero-unit {
+		padding: 10px 20px;
+	}
+	.hero-unit p {
+		font-size: 16px;
+	}
+	
+	.col-wrap {
+		margin-left: 10px;
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	.hero-unit {
+		padding: 10px;
+	}
+	.hero-unit h1 {
+		font-size: 22px;
+	}
+
+}
