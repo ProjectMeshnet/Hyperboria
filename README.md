@@ -2,7 +2,9 @@
 
 ---
 
-Hyperboria.net is a decentralized network of cjdns nodes forming a global mesh network.
+Hyperboria is a decentralized network of cjdns nodes forming a global mesh network.
+
+Hyperboria.net is an informational website created by the Project Meshnet crew.
 
 ### PULL REQUESTS PLEASE!
 
