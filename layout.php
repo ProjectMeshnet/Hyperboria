@@ -55,8 +55,8 @@
 				<p>
 					This <span xmlns:dct="http://purl.org/dc/terms/" 
 					href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span> 
-					is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
-					Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
+					is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+					Creative Commons Attribution 3.0 Unported License.</a>.
 				</p>
 			</footer>
 			
