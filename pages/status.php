@@ -1,11 +1,10 @@
-
 <ul class="breadcrumb">
 	<li>
-		<a href="/">Home</a> <span class="divider">/</span>
+		<a href="/"><?=_("Home")?></a> <span class="divider">/</span>
 	</li>
-	<li class="active">Status</li>
+	<li class="active"><?=_("Status")?></li>
 </ul>
 
-<h1>Network status</h1>
+<h1><?=_("Network status")?></h1>
 
 <br><br><br><br><br><br><br><br><br>
