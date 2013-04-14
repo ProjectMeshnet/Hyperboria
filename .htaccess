@@ -1,24 +1,5 @@
-# Apache configuration file
-# httpd.apache.org/docs/2.2/mod/quickreference.html
-
-# Note .htaccess files are an overhead, this logic should be in your Apache config if possible
-# httpd.apache.org/docs/2.2/howto/htaccess.html
-
-# Techniques in here adapted from all over, including:
-#   Kroc Camen: camendesign.com/.htaccess
-#   perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/
-#   Sample .htaccess file of CMS MODx: modxcms.com
-
-
-###
-### If you run a webserver other than Apache, consider:
-### github.com/h5bp/server-configs
-###
-
-
-
 # ----------------------------------------------------------------------
-# Better website experience for IE users
+# Better website experience for IE users (We are to nice, we know)
 # ----------------------------------------------------------------------
 
 # Force the latest IE version, in various cases when it may fall back to IE7 mode
@@ -422,8 +403,8 @@ Options -MultiViews
 # ----------------------------------------------------------------------
 
 # You can add custom pages to handle 500 or 403 pretty easily, if you like.
-ErrorDocument 404 /404
-ErrorDocument 403 /403
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
 
 
 # ----------------------------------------------------------------------
@@ -474,92 +455,3 @@ AddCharset utf-8 .css .js .xml .json .rss .atom
   Deny from all
   Satisfy All
 </FilesMatch>
-
-
-# If your server is not already configured as such, the following directive
-# should be uncommented in order to set PHP's register_globals option to OFF.
-# This closes a major security hole that is abused by most XSS (cross-site
-# scripting) attacks. For more information: http://php.net/register_globals
-#
-# IF REGISTER_GLOBALS DIRECTIVE CAUSES 500 INTERNAL SERVER ERRORS :
-#
-# Your server does not allow PHP directives to be set via .htaccess. In that
-# case you must make this change in your php.ini file instead. If you are
-# using a commercial web host, contact the administrators for assistance in
-# doing this. Not all servers allow local php.ini files, and they should
-# include all PHP configurations (not just this one), or you will effectively
-# reset everything to PHP defaults. Consult www.php.net for more detailed
-# information about setting PHP directives.
-
-# php_flag register_globals Off
-
-# Rename session cookie to something else, than PHPSESSID
-# php_value session.name sid
-
-# Do not show you are using PHP
-# Note: Move this line to php.ini since it won't work in .htaccess
-# php_flag expose_php Off
-
-# Level of log detail - log all errors
-# php_value error_reporting -1
-
-# Write errors to log file
-# php_flag log_errors On
-
-# Do not display errors in browser (production - Off, development - On)
-# php_flag display_errors Off
-
-# Do not display startup errors (production - Off, development - On)
-# php_flag display_startup_errors Off
-
-# Format errors in plain text
-# Note: Leave this setting 'On' for xdebug's var_dump() output
-# php_flag html_errors Off
-
-# Show multiple occurrence of error
-# php_flag ignore_repeated_errors Off
-
-# Show same errors from different sources
-# php_flag ignore_repeated_source Off
-
-# Size limit for error messages
-# php_value log_errors_max_len 1024
-
-# Don't precede error with string (doesn't accept empty string, use whitespace if you need)
-# php_value error_prepend_string " "
-
-# Don't prepend to error (doesn't accept empty string, use whitespace if you need)
-# php_value error_append_string " "
-
-# Increase cookie security
-<IfModule php5_module>
-  php_value session.cookie_httponly true
-</IfModule>
-
-# ----------------------------------------------------------------------
-# Routing with SEF URLs
-# ----------------------------------------------------------------------
-
-# no direct access to PHP files except index.php
-<FilesMatch "\.php$">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-<FilesMatch "index\.php$">
-    Order Allow,Deny
-    Allow from all
-</FilesMatch>
-
-# redirect "index.php" to "/"
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/ 
-RewriteRule ^index\.php$ / [R=301,L] 
-
-# removes trailing slash if not a directory
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
-
-# SEF URLs
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/index\.php -f
-RewriteRule ^(.*)$  /index.php?page=$1 [QSA]
