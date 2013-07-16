@@ -294,7 +294,7 @@ body {
   font: 14px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
   line-height: 1.428571429;
   color: #8E8E8E;
-  background-color: #ffffff;
+  background-color: #E4E4E4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -346,7 +346,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #cccccc;
 }
 
 p {
@@ -428,8 +428,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font: 16px/20px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -466,17 +466,24 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 38px;
+  font-size: 58px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 h3,
 .h3 {
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
 }
 
 h4,
@@ -513,8 +520,7 @@ h4 small,
 
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  margin: 40px 80px 20px;
 }
 
 ul,
@@ -2629,18 +2635,22 @@ button.close {
   line-height: 1.428571429;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
+  color: #f4f4f4;
+  background-color: #C8AEC8;
 }
 
 .nav-tabs > li > a:hover {
   border-color: #eeeeee #eeeeee #dddddd;
+  color: #f4f4f4;
+  background-color: #cccccc;
 }
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: #f4f4f4;
   cursor: default;
-  background-color: #ffffff;
+  background-color: #996699;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }

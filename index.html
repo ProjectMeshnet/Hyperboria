@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="github.com/dansup/hyperboria">
 <title>Hyperboria</title>
 <link href="/assets/css/bootstrap.css" rel="stylesheet">
-<link rel="shortcut icon" href="/assets/img/favi.png">
+<link href="/assets/css/prettify.css" rel="stylesheet">
+<link href="/assets/css/solarized-dark.css" rel="stylesheet">
+<link rel="shortcut icon" href="/assets/img/favicon.png">
+<!-- Temporary CDN links during development, will be local for production for Hyperboria compatability. -->
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<!--- TODO: Separate custom bootstrap css into custom.css -->
+<style>
+.top-jumbo {
+	margin-top: 40px;
+	padding-top: 50px;
+	height: 240px;
+	background-color: #1B1B1B;
+	color: #F4F4F4;
+}
+</style>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
 <div id="wrap">
-<div class="navbar navbar-fixed-top">
+<div id="navbar-scroll" class="navbar navbar-fixed-top">
 <div class="container">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
 <span class="icon-bar"></span>
@@ -20,21 +34,182 @@
 <a class="navbar-brand" href="/">Hyperboria</a>
 <div class="nav-collapse collapse">
 <ul class="nav navbar-nav">
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#join">How to join</a></li>
+	<li><a href="#services">Services</a></li>
+	<li><a href="#stats">Stats</a></li>
+
+</ul>
+<!-- Future Dropdown nav for l10n -->
+<ul class="nav navbar-nav pull-right">
+	<li><a href="#">lang: <b>en</b></a></li>
+
 </ul>
 </div> 
 </div>
 </div>
-<div class="container">
-<div class="jumbotron">
-<h1>It's here.</h1>
-<p class="lead">Encrypted networking for everyone.</p></div>
-<div>
-<p class="lead text-muted">Imagine an Internet where every packet is cryptographically protected from source to destination against espionage and forgery, getting an IP address is as simple as generating a cryptographic key, core routers move data without a single memory look up, and denial of service is a term read about in history books. Finally, becoming an ISP is no longer confined to the mighty telecoms, anyone can do it by running some wires or turning on a wireless device.</p><hr>
-<p class="text-center"><a class="btn btn-large btn-hyperboria" href="welcome.html">Welcome to Hyperboria</a></p>
+<div class="top-jumbo">
+		<div class="col col-lg-3"></div>
+		<div class="col col-lg-2">
+			<img src="/assets/img/top-jumbo.png" style="margin-top:28px;height:84px;width:129px;" alt="Hyperboria network infographic" />
+		</div>
+		<div class="col col-lg-4">
+			<h2>a global meshnet</h2>
+			<h3>powered by cjdns nodes</h3>
+	</div>
 </div>
+<div class="container" data-spy="scroll" data-target="#navbar-scroll" data-offset="0">
+<div id="overview" class="row">
+	<div class="page-header">
+		<h1>Overview</h1><p class="lead">Encrypted networking for everyone</p>
+	</div>
+	<div class="col col-lg-2"></div>
+	<div class="col col-lg-2 text-center" style="background-image:url(/assets/img/overview-open.png);width:215px;height:374px;padding-top:200px;">
+		<h1>Open</h1>
+		<p>Anyone can join by peering with someone already connected.</p>
+	</div>
+	<div class="col col-lg-1"></div>
+	<div class="col col-lg-2 text-center" style="background-image:url(/assets/img/overview-p2p.png);width:215px;height:374px;padding-top:200px;">
+		<h1>P2P</h1>
+		<p>Cjdns is built on the same principles as Kademlia DHT, the network is censorship resistant.</p>
+	</div>
+	<div class="col col-lg-1"></div>
+	<div class="col col-lg-2 text-center" style="background-image:url(/assets/img/overview-secure.png);width:215px;height:374px;padding-top:200px;">
+		<h1>Secure</h1>
+		<p>Packets are encrypted end-to-end using a clever public key based on your unique cjdns ipv6 address.</p>
+	</div>
+</div>
+<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
+<div id="join" class="row">
+<div class="page-header">
+		<h1>How do I join?</h1>
+		<p class="lead">Install the cjdns software on a supported device/platform and locate a peer.</p>
+	</div>	
+	<div class="col col-lg-1">
+	</div>
+	<div class="col col-lg-2">
+		<ul id="install" class="nav nav-tabs nav-stacked">
+		<li class="active"><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
+		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
+		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
+		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
+		<li><a href="#android" class="lead" data-toggle="tab">Android</a></li>
+
+
+		</ul>
+	</div>
+	<div class="col col-lg-8">
+		<div id="installContent" class="tab-content">
+		<div class="tab-pane fade in active" id="ubuntu">
+		<pre class="prettyprint">
+			$ sudo apt-get install cmake git build-essential
+			$ git clone https://github.com/cjdelisle/cjdns.git
+			$ cd cjdns
+			$ ./do
+			$ ./cjdroute
+		</pre>
+		</div>
+		<div class="tab-pane fade in" id="archlinux">
+		<pre class="prettyprint">
+			$ sudo yaourt -S cjdns-git
+ 			$ sudo cjdroute --genconf > /etc/cjdroute.conf
+			$ sudo systemctl start cjdns
+		</pre>
+		</div>
+		<div class="tab-pane fade in" id="fedora">
+		<pre class="prettyprint">
+			sudo apt-get install cmake git build-essential
+			git clone https://github.com/cjdelisle/cjdns.git
+			cd cjdns
+			./do
+			./cjdroute
+		</pre>
+		</div>
+
+		</div>
+
+</div>
+</div>
+<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
+<div id="services" class="row">
+	<div class="page-header">
+		<h1>Services</h1><p class="lead">Early settlers have established services like irc, forums and social networks and users are presented with an experience typically without advertisements, 3rd party resources (analytics/tracking) or malicous websites.</p>
+	</div>
+	<div class="col col-lg-2"></div>
+	<div class="col col-lg-8">
+		<div class="accordion" id="services">
+		<div class="accordion-group">
+		<div class="accordion-heading" style="background-color:#996699;">
+        <a class="accordion-toggle" style="color:#E4E4E4;font-size:30px;" data-toggle="collapse" data-parent="#services" href="#services-web">
+		Websites
+		</a>
+		</div>
+		<div id="services-web" class="accordion-body collapse in">
+		<div class="accordion-inner well" style="margin:40px;padding:40px;">
+		<ul class="text-left">
+			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li ><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+			<li><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
+
+		</ul>
+
+		</div>
+		</div>
+		</div>
+		<div class="accordion-group">
+		<div class="accordion-heading" style="background-color:#996699;">
+        <a class="accordion-toggle" style="color:#E4E4E4;font-size:30px;" data-toggle="collapse" data-parent="#services" href="#services-srv">
+		Services
+		</a>
+		</div>
+		<div id="services-srv" class="accordion-body collapse">
+		<div class="accordion-inner well" style="margin:40px;padding:20px;">
+		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+</div><!-- row collapse -->
+<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
+<!-- Statistics will be basic initially until I write a more complex backend for collecting various data -->
+<div id="stats" class="row">
+	<div class="page-header">
+		<h1>Stats</h1><p class="lead">In the past 30 days <b>$DailyAvg</b> have joined the network.</p>
+	</div>
+	<div class="col col-lg-2"></div>
+	<div class="col col-lg-8">
+	</div>
+</div>
+<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
+</div>
+</div>
+<div id="footer" style="background-color:#fff">
+<div class="container">
+<p class="credit text-right">
+	<!-- Use ProjectMeshnet Social Accounts until further notice -->
+  <a href="https://facebook.com/projectmeshnet"><i class="icon-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/ProjectMeshnet"><i class="icon-github"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://plus.google.com/114581766290654528027"><i class="icon-google-plus"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://twitter.com/projectmeshnet"><i class="icon-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	designed by <a href="#">dansup</a>
+ </p>
 </div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 <script src="/assets/js/bootstrap.js"></script>
+<script src="/assets/js/prettify.js"></script>
+<script type="text/javascript">
+	(function(jQuery){
+	  jQuery( document ).ready( function() {
+	    prettyPrint();
+	  } );
+	}(jQuery))
+</script>
 </body>
 </html>
