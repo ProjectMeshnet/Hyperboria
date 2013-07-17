@@ -2,13 +2,6 @@
 // locale
 $locale = "en_US"; // default locale
 $domain = "messages"; // name of file with translations
-if (isset($_GET['lang'])) {
-	$locale = $_GET['lang'];
-	setcookie('lang', $_GET['lang'], 1640995200);
-}
-elseif (isset($_COOKIE['lang'])) {
-	$locale = $_COOKIE['lang'];
-}
 setlocale(LC_ALL, $locale);
 putenv("LC_ALL=".$locale);
 bindtextdomain($domain, "./locale");
@@ -113,7 +106,7 @@ textdomain($domain);
 <br><br>
 <div class="page-header">
 		<h1>How do I join?</h1>
-		<p class="lead">Install the cjdns software on a supported device/platform and locate a peer.</p>
+		<p class="lead">Install the cjdns software on a supported device/platform and locate a peer via <a href="https://chat.projectmeshnet.org/#projectmeshnet" rel="nofollow">IRC</a> or <a href="http://atlas.projectmeshnet.org">the global map</a>.</p>
 	</div>	
 	<div class="col col-lg-1">
 	</div>
