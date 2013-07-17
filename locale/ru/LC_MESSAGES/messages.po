@@ -1,0 +1,103 @@
+# Hyperboria.net Russian translation
+# Copyright (C) 2012 Project Meshnet
+# This file is distributed under the same license as the Hyperboria.net package.
+# Komachi Onozuka <komachi.onozuka@ya.ru>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Hyperboria.net\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-09 03:20+0400\n"
+"PO-Revision-Date: 2013-07-16 18:59-0700\n"
+"Last-Translator: Komachi Onozuka <komachi.onozuka@ya.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+#: index.php:81
+msgid "a global meshnet"
+msgstr "глобальные meshnet"
+
+#: index.php:54
+msgid "Overview"
+msgstr "обзор"
+
+#: index.php:55
+msgid "How to join"
+msgstr "Как присоединиться"
+
+#: index.php:56
+msgid "Services"
+msgstr"Как присоединиться"
+
+#: index.php:57
+msgid "Services"
+msgstr"социальный"
+
+#: pages/default.php:6
+msgid ""
+"<b>Hyperboria</b> is the first and only CJDNS powered decentralized network."
+msgstr ""
+"<b>Hyperboria</b> — первая и единственная децентрализованная сеть, "
+"основанная на CJDNS."
+
+#: pages/default.php:7
+msgid "Learn more"
+msgstr "Узнайте больше"
+
+#: pages/default.php:16
+msgid "A new kind of network."
+msgstr "Новый вид сетей."
+
+#: pages/default.php:19
+msgid "You can also learn more about"
+msgstr "Вы также можете узнать больше о"
+
+#: pages/default.php:19
+msgid "on MeshWiki."
+msgstr "на MeshWiki."
+
+#: pages/default.php:27
+msgid "You are connected!"
+msgstr "Вы подключены!"
+
+#: pages/default.php:28
+msgid "You might want to checkout"
+msgstr "Возможно вы захотите посмотреть"
+
+#: pages/default.php:32
+msgid "Trouble connecting?"
+msgstr "Проблемы с подключением?"
+
+#: pages/default.php:33
+msgid ""
+"Take a look at the <a href=\"https://wiki.projectmeshnet.org/"
+"CJDNS_Troubleshooting\">troubleshooting guide</a>!"
+msgstr ""
+"Посмотрите <a href=\"https://wiki.projectmeshnet.org/CJDNS_Troubleshooting"
+"\">руководство по решению проблем</a>!"
+
+#: pages/default.php:34
+msgid "Still can't figure it out? Come chat with us on"
+msgstr "Все еще не можете понять? Заходите в"
+
+#: pages/default.php:34
+msgid "where we can help you."
+msgstr "где мы сможем вам помочь."
+
+#: pages/default.php:42
+msgid "Resources"
+msgstr "Ресурсы"
+
+#: pages/default.php:45
+msgid "Known Hyperboria sites"
+msgstr "Известные сайты в Hyperboria"
+
+#: pages/status.php:5
+msgid "Status"
+msgstr "Статус"
+
+#: pages/status.php:8
+msgid "Network status"
+msgstr "Статус сети"

@@ -1,5 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// locale
+$locale = "en_US"; // default locale
+$domain = "messages"; // name of file with translations
+if (isset($_GET['lang'])) {
+	$locale = $_GET['lang'];
+	setcookie('lang', $_GET['lang'], 1640995200);
+}
+elseif (isset($_COOKIE['lang'])) {
+	$locale = $_COOKIE['lang'];
+}
+setlocale(LC_ALL, $locale);
+putenv("LC_ALL=".$locale);
+bindtextdomain($domain, "./locale");
+bind_textdomain_codeset($domain,'UTF-8');
+textdomain($domain);
+?><!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,15 +51,22 @@
 <a class="navbar-brand" href="/">Hyperboria</a>
 <div class="nav-collapse collapse">
 <ul class="nav navbar-nav">
-	<li><a href="#overview">Overview</a></li>
-	<li><a href="#join">How to join</a></li>
-	<li><a href="#services">Services</a></li>
-	<li><a href="#social">Social</a></li>
+	<li><a href="#overview"><?=_("Overview")?></a></li>
+	<li><a href="#join"><?=_("How to join")?></a></li>
+	<li><a href="#services"><?=_("Services")?></a></li>
+	<li><a href="#social"><?=_("Social")?></a></li>
 
 </ul>
 <!-- Future Dropdown nav for l10n -->
 <ul class="nav navbar-nav pull-right">
-	<li><a href="#">lang: <b>en</b></a></li>
+	<li class="dropdown">
+<a href="/?lang=en_US" class="dropdown-toggle" data-toggle="dropdown">lang: <b>en</b> <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="#">lang: <b>it</b></a></li>
+<li><a href="/?lang=ru_RU">lang: <b>Русский</b></a></li>
+<li><a href="#">lang: <b>fr</b></a></li>
+</ul>
+</li>
 
 </ul>
 </div> 
@@ -55,7 +78,7 @@
 			<img src="assets/img/top-jumbo.png" style="margin-top:28px;height:84px;width:129px;" alt="Hyperboria network infographic" />
 		</div>
 		<div class="col col-lg-4">
-			<h2>a global meshnet</h2>
+			<h2><?=_("a global meshnet")?></h2>
 			<h3>powered by <a href="https://github.com/cjdelisle/cjdns">cjdns</a> nodes</h3>
 	</div>
 </div>
@@ -110,6 +133,9 @@
 
 		<div class="tab-pane fade in active" id="debian">
 		<pre class="prettyprint">
+#Building cjdns from source on Debian
+#created by @cjd
+
 sudo apt-get install cmake git build-essential
 git clone https://github.com/cjdelisle/cjdns.git
 cd cjdns
@@ -119,11 +145,59 @@ cd cjdns
 		</div>
 		<div class="tab-pane fade in" id="ubuntu">
 		<pre class="prettyprint">
-ask thefinn93
+#Building cjdns from source on Ubuntu
+#created by @thefinn93
+
+#This installation method is described in the cjdns documentation and is recommended by the Project Meshnet coordinators.
+#Note that most of this takes place in the Terminal. The Ubuntu wiki explains how to open it, if you are not sure how.
+#Updating system
+#As a preliminary stage, it is advisable to update all the packages to their latest versions. This is done by issuing
+$ sudo apt-get update && sudo apt-get upgrade
+#in the terminal.
+#Installing dependencies
+#Compiling cjdns from source requires some dependencies. The following packages are build-time dependencies, i.e. they are only needed for the build process and interaction with GitHub, and can be safely removed upon completion.
+#To install the dependencies, type
+$ sudo apt-get install build-essential git libevent-dev cmake
+#Fetching sources
+#This guide assumes that cjdns is built in the /opt directory. To download the latest snapshot of the cjdns source code] from GitHub, issue
+$ cd /opt
+$ sudo git clone https://github.com/cjdelisle/cjdns.git
+$ cd cjdns
+#Actual build
+#The following will download and build cmake (in case the correct version is not installed), build cjdns and run some tests to make sure it works correctly.
+$ sudo ./do
+#Compilation is now complete. A successful build should produce the following message:
+#Build completed successfully, type ./cjdroute to begin setup.
+#The build will produce an executable, named cjdroute, in /opt/cjdns.
+#Configuring cjdns
+
+#Creating config file
+#Running the following command will create a new configuration file, which contains a private key, a public key, and a corresponding IPv6 address.
+./cjdroute --genconf > /tmp/cjdroute.conf     # Generates the configuration file
+#It is a good practice[1] to store system-wide configuration files in the /etc tree hierarchy.
+#To move the newly-created configuration file to its permanent location, issue
+sudo mv /tmp/cjdroute.conf /etc/cjdroute.conf
+#For security reasons, the config file should be owned by the superuser, and not accessible to others. This is accomplished by running
+sudo chown root:root /etc/cjdroute.conf
+sudo chmod 600 /etc/cjdroute.conf
+#Adding peers
+#Main article: How To Add Peers
+#Since cjdns is a friend-to-friend network, new/potential users will need to request connection credentials from the owners of the existing nodes. Currently, IRC is the communication media most widely used to find peers.
+#After the connection credentials are obtained[Note 1], they are added to the config file with this command:
+$ sudo gnome-text-editor /etc/cjdroute.conf
+#[Note 2]
+#Running cjdroute manually
+#There are two ways to start cjdroute. The first is by typing
+$ sudo ./cjdroute < /etc/cjdroute.conf
+#and the second one is by adding it to the auto-start script (discussed in the next section). cjdroute will run as daemon until next reboot or until stopped by issuing
+$ sudo killall cjdroute
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="archlinux">
 		<pre class="prettyprint">
+#Building cjdns from source on ArchLinux
+#created by @prurigro
+
 sudo yaourt -S cjdns-git
 sudo cjdroute --genconf > /etc/cjdroute.conf
 sudo systemctl start cjdns
@@ -131,6 +205,9 @@ sudo systemctl start cjdns
 		</div>
 		<div class="tab-pane fade in" id="fedora">
 		<pre class="prettyprint">
+#Building cjdns from source on Fedora
+#created by @reptoidz
+
 yum install @development-tools
 yum install cmake
 git clone https://github.com/cjdelisle/cjdns.git
@@ -140,6 +217,9 @@ git clone https://github.com/cjdelisle/cjdns.git
 		</div>
 		<div class="tab-pane fade in" id="openwrt">
 		<pre class="prettyprint">
+#Building cjdns from source on OpenWRT
+#created by @cjd
+
 cd ~
 svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
 cd openwrt
@@ -186,9 +266,9 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 			<td><a href="http://socialno.de/dan" rel="nofollow">@dan</a> and <a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
 			</tr>
 			<tr>
-			<td><h5><a href="http://urlcloud.net" rel="nofollow">http://urlcloud.net</h5></td>
-			<td>urlcloud - simple file sharing for Hyperboria</td>
-			<td><a href="http://socialno.de/derp" rel="nofollow">@derp</a></td>
+			<td><h5><a href="http://cjdns.ezcrypt.it" rel="nofollow">http://<b>cjdns</b>.ezcrypt.it</h5></td>
+			<td>EZcrypt - encrypted pastebin</td>
+			<td>novaking</td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://socialno.de" rel="nofollow">http://socialno.de</h5></td>
@@ -233,7 +313,7 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 			</thead>
 			<tbody>
 			<tr>
-			<td><h5><a href="http://hyperboria.thefinn93.com:11371" rel="nofollow">http://hyperboria.thefinn93.com:11371</h5></td>
+			<td><h5><a href="hpk://hyperboria.thefinn93.com:11371" rel="nofollow">hpk://hyperboria.thefinn93.com:11371</h5></td>
 			<td>OpenPGP Keyserver</td>
 			<td><a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
 			</tr>
@@ -309,7 +389,7 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
   <a href="https://github.com/dansup/hyperboria"><i class="icon-github icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://plus.google.com/114581766290654528027"><i class="icon-google-plus icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://twitter.com/projectmeshnet"><i class="icon-twitter icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	designed by <a href="#">dansup</a>
+	designed by <a href="https://github.com/dansup">dansup</a>
  </p>
 </div>
 </div>
