@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="github.com/dansup/hyperboria">
 <title>Hyperboria</title>
 <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -37,7 +38,7 @@
 	<li><a href="#overview">Overview</a></li>
 	<li><a href="#join">How to join</a></li>
 	<li><a href="#services">Services</a></li>
-	<li><a href="#stats">Stats</a></li>
+	<li><a href="#social">Social</a></li>
 
 </ul>
 <!-- Future Dropdown nav for l10n -->
@@ -55,7 +56,7 @@
 		</div>
 		<div class="col col-lg-4">
 			<h2>a global meshnet</h2>
-			<h3>powered by cjdns nodes</h3>
+			<h3>powered by <a href="https://github.com/cjdelisle/cjdns">cjdns</a> nodes</h3>
 	</div>
 </div>
 <div class="container" data-spy="scroll" data-target="#navbar-scroll" data-offset="0">
@@ -95,7 +96,8 @@
 	</div>
 	<div class="col col-lg-2">
 		<ul id="install" class="nav nav-tabs nav-stacked">
-		<li class="active"><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
+		<li class="active"><a href="#debian" class="lead" data-toggle="tab">Debian</a></li>
+		<li><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
 		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
 		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
 		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
@@ -105,44 +107,46 @@
 	</div>
 	<div class="col col-lg-8">
 		<div id="installContent" class="tab-content">
-		<div class="tab-pane fade in active" id="ubuntu">
+
+		<div class="tab-pane fade in active" id="debian">
 		<pre class="prettyprint">
-		<br>
-		$ sudo apt-get install cmake git build-essential
-		$ git clone https://github.com/cjdelisle/cjdns.git
-		$ cd cjdns
-		$ ./do
-		$ ./cjdroute
+sudo apt-get install cmake git build-essential
+git clone https://github.com/cjdelisle/cjdns.git
+cd cjdns
+./do
+./cjdroute
+		</pre>
+		</div>
+		<div class="tab-pane fade in" id="ubuntu">
+		<pre class="prettyprint">
+ask thefinn93
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="archlinux">
 		<pre class="prettyprint">
-		<br>
-		$ sudo yaourt -S cjdns-git
-		$ sudo cjdroute --genconf > /etc/cjdroute.conf
-		$ sudo systemctl start cjdns
+sudo yaourt -S cjdns-git
+sudo cjdroute --genconf > /etc/cjdroute.conf
+sudo systemctl start cjdns
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="fedora">
 		<pre class="prettyprint">
-		<br>
-		$ yum install @development-tools
-		$ yum install cmake
-		$ git clone https://github.com/cjdelisle/cjdns.git
-		$ ./do
-		$ ./cjdroute
+yum install @development-tools
+yum install cmake
+git clone https://github.com/cjdelisle/cjdns.git
+./do
+./cjdroute
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="openwrt">
 		<pre class="prettyprint">
-		<br>
-		$ cd ~
-		$ svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
-		$ cd openwrt
-		$ cp ./feeds.conf.default ./feeds.conf
-		$ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.conf
-		$ ./scripts/feeds update -a
-		$ ./scripts/feeds install cjdns
+cd ~
+svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
+cd openwrt
+cp ./feeds.conf.default ./feeds.conf
+echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.conf
+./scripts/feeds update -a
+./scripts/feeds install cjdns
 		</pre>
 		</div>
 
@@ -154,7 +158,7 @@
 <div id="services" class="row">
 <br><br>
 	<div class="page-header">
-		<h1>Services</h1><p class="lead">Early settlers have established services like irc, forums and social networks and users are presented with an experience typically without advertisements, 3rd party resources (analytics/tracking) or malicous websites.</p>
+		<h1>Services</h1><p class="lead">A few popular websites and services available on the network.</p>
 	</div>
 	<div class="col col-lg-1"></div>
 	<div class="col col-lg-10">
@@ -177,16 +181,6 @@
 			</thead>
 			<tbody>
 			<tr>
-			<td><h5><a href="http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html" rel="nofollow">http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html</a></h5></td>
-			<td>iRcann - the info.cern.ch of Hyperboria</td>
-			<td><a href="http://socialno.de/ircerr">@ircerr</a></td>
-			</tr>
-			<tr>
-			<td><h5><a href="http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]" rel="nofollow">http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]</a></h5></td>
-			<td>NodeInfo - your flashlight in the darknet</td>
-			<td><a href="http://socialno.de/mikey" rel="nofollow">@mikey</a></td>
-			</tr>
-			<tr>
 			<td><h5><a href="http://uppit.us" rel="nofollow">http://uppit.us</h5></td>
 			<td>Uppit - a reddit powered community</td>
 			<td><a href="http://socialno.de/dan" rel="nofollow">@dan</a> and <a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
@@ -202,13 +196,22 @@
 			<td><a href="http://socialno.de/derp" rel="nofollow">@derp</a></td>
 			</tr>
 			<tr>
+			<td><h5><a href="http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html" rel="nofollow">http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html</a></h5></td>
+			<td>iRcann - the info.cern.ch of Hyperboria</td>
+			<td><a href="http://socialno.de/ircerr">@ircerr</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]" rel="nofollow">http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]</a></h5></td>
+			<td>NodeInfo - your flashlight in the darknet</td>
+			<td><a href="http://socialno.de/mikey" rel="nofollow">@mikey</a></td>
+			</tr>
+			<tr>
 			<td colspan="3">
-			<a href="https://wiki.projectmeshnet.org/Known_Hyperboria_sites">view more websites</a>
+			<a href="https://wiki.projectmeshnet.org/Known_Hyperboria_sites#Websites">view more websites</a>
 			</td>
 			</tr>
 			</tbody>
 			</table>
-
 		</div>
 		</div>
 		</div>
@@ -220,7 +223,48 @@
 		</div>
 		<div id="services-srv" class="accordion-body collapse">
 		<div class="accordion-inner well" style="margin:40px;padding:20px;">
-		Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		<table class="table table-bordered">
+			<thead>
+			<tr>
+			<th>Service</th>
+			<th>Description</th>
+			<th>Maintainer</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td><h5><a href="http://hyperboria.thefinn93.com:11371" rel="nofollow">http://hyperboria.thefinn93.com:11371</h5></td>
+			<td>OpenPGP Keyserver</td>
+			<td><a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://hyperboria.name" rel="nofollow">http://hyperboria.name</h5></td>
+			<td>Hyperboria.name - free mail and subdomain service</td>
+			<td><a href="http://socialno.de/grundy" rel="nofollow">@grundy</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://hypebox.net" rel="nofollow">http://hypebox.net</h5></td>
+			<td>HypeBox.net - a blogging platform exclusive to Hyperboria</td>
+			<td><a href="http://socialno.de/jph" rel="nofollow">@jph</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://hypeirc.net" rel="nofollow">http://hypeirc.net</a></h5></td>
+			<td>HypeIRC - the IRC network of Hyperboria</td>
+			<td><a href="http://socialno.de/derp">@derp</a>, <a href="http://socialno.de/prurigro">@prurigro</a>, <a href="http://socialno.de/jercos">@jercos</a>, and <a href="http://socialno.de/cjd">@cjd</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]/hypedns" rel="nofollow">http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]/HypeDNS</a></h5></td>
+			<td>HypeDNS - dns for Hyperboria</td>
+			<td><a href="http://socialno.de/mikey" rel="nofollow">@mikey</a></td>
+			</tr>
+			<tr>
+			<td colspan="3">
+			<a href="https://wiki.projectmeshnet.org/Known_Hyperboria_sites#Services">view more services</a>
+			</td>
+			</tr>
+			</tbody>
+			</table>
+
 		</div>
 		</div>
 		</div>
@@ -228,27 +272,43 @@
 	</div>
 </div><!-- row collapse -->
 <div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
-<!-- Statistics will be basic initially until I write a more complex backend for collecting various data -->
-<div id="stats" class="row">
+<div id="social" class="row">
 <br><br>
 	<div class="page-header">
-		<h1>Stats</h1><p class="lead">In the past 30 days <b>$DailyAvg</b> have joined the network.</p>
+		<h1>Social</h1><p class="lead">Insight into #hyperboria, help spread the word!</p>
 	</div>
 	<div class="col col-lg-2"></div>
-	<div class="col col-lg-8">
+	<div class="col col-lg-4">
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		<g:community href="https://plus.google.com/communities/101984975922141471371"></g:community>
+		<br><br>
+		<div class="g-page" data-width="300" data-href="//plus.google.com/114581766290654528027" data-layout="landscape" data-rel="publisher"></div>
+
+		<script type="text/javascript">
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
 	</div>
+	<div class="col col-lg-1"></div>
+	<div class="col col-lg-4">
+	<a class="twitter-timeline" href="https://twitter.com/search?q=%23hyperboria" data-widget-id="357324512297107456">Tweets about "#hyperboria"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
-<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
+</div>
+<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"></div></div></div>
 </div>
 </div>
 <div id="footer" style="background-color:#fff">
 <div class="container">
 <p class="credit text-right">
 	<!-- Use ProjectMeshnet Social Accounts until further notice -->
-  <a href="https://facebook.com/projectmeshnet"><i class="icon-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/ProjectMeshnet"><i class="icon-github"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://plus.google.com/114581766290654528027"><i class="icon-google-plus"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://twitter.com/projectmeshnet"><i class="icon-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://facebook.com/projectmeshnet"><i class="icon-facebook icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/dansup/hyperboria"><i class="icon-github icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://plus.google.com/114581766290654528027"><i class="icon-google-plus icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://twitter.com/projectmeshnet"><i class="icon-twitter icon-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	designed by <a href="#">dansup</a>
  </p>
 </div>
@@ -263,5 +323,6 @@
 	  } );
 	}(jQuery))
 </script>
+
 </body>
 </html>
