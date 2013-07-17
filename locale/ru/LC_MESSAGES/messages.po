@@ -29,11 +29,11 @@ msgstr "Как присоединиться"
 
 #: index.php:56
 msgid "Services"
-msgstr"Как присоединиться"
+msgstr "Как присоединиться"
 
 #: index.php:57
 msgid "Social"
-msgstr"социальный"
+msgstr "социальный"
 
 #: pages/default.php:6
 msgid ""
