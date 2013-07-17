@@ -97,6 +97,7 @@
 		<ul id="install" class="nav nav-tabs nav-stacked">
 		<li class="active"><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
 		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
+		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
 		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
 
 
@@ -120,6 +121,16 @@
 		$ sudo yaourt -S cjdns-git
 		$ sudo cjdroute --genconf > /etc/cjdroute.conf
 		$ sudo systemctl start cjdns
+		</pre>
+		</div>
+		<div class="tab-pane fade in" id="fedora">
+		<pre class="prettyprint">
+		<br>
+		$ yum install @development-tools
+		$ yum install cmake
+		$ git clone https://github.com/cjdelisle/cjdns.git
+		$ ./do
+		$ ./cjdroute
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="openwrt">
