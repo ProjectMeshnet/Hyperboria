@@ -1,0 +1,106 @@
+# Hyperboria.net Russian translation
+# Copyright (C) 2012 Project Meshnet
+# This file is distributed under the same license as the Hyperboria.net package.
+# Komachi Onozuka <komachi.onozuka@ya.ru>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Hyperboria.net\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-09 03:20+0400\n"
+"PO-Revision-Date: 2013-07-17 15:34+0100\n"
+"Last-Translator: Enric Morales <i18n@enric.me>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.5.5\n"
+"Language: es\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: index.php:81
+msgid "a global meshnet"
+msgstr "una red en malla global"
+
+#: index.php:54
+msgid "Overview"
+msgstr "Vistazo general"
+
+#: index.php:55
+msgid "How to join"
+msgstr "¿Cómo unirse?"
+
+#: index.php:56
+msgid "Services"
+msgstr "Servicios"
+
+#: index.php:57
+msgid "Social"
+msgstr "Social"
+
+#: pages/default.php:6
+msgid ""
+"<b>Hyperboria</b> is the first and only CJDNS powered decentralized network."
+msgstr ""
+"<b>Hyperboria</b> — es la primera y única red descentralizada que funciona "
+"con CJDNS."
+
+#: pages/default.php:7
+msgid "Learn more"
+msgstr "Más información"
+
+#: pages/default.php:16
+msgid "A new kind of network."
+msgstr "Un nuevo tipo de red"
+
+#: pages/default.php:19
+msgid "You can also learn more about"
+msgstr "Puedes saber más cosas"
+
+#: pages/default.php:19
+msgid "on MeshWiki."
+msgstr "en MeshWiki."
+
+#: pages/default.php:27
+msgid "You are connected!"
+msgstr "Estás conectado!"
+
+#: pages/default.php:28
+msgid "You might want to checkout"
+msgstr "Quizás va interesarte"
+
+#: pages/default.php:32
+msgid "Trouble connecting?"
+msgstr "Problemas al conectarte?"
+
+#: pages/default.php:33
+msgid ""
+"Take a look at the <a href=\"https://wiki.projectmeshnet.org/"
+"CJDNS_Troubleshooting\">troubleshooting guide</a>!"
+msgstr ""
+"Echa un vistazo a <a href=\"https://wiki.projectmeshnet.org/"
+"CJDNS_Troubleshooting\">la guia de resolución de problemas</a>!"
+
+#: pages/default.php:34
+msgid "Still can't figure it out? Come chat with us on"
+msgstr "¿Aún no sabes qué hacer? Entra en nuestro chat"
+
+#: pages/default.php:34
+msgid "where we can help you."
+msgstr "y podremos ayudarte."
+
+#: pages/default.php:42
+msgid "Resources"
+msgstr "Recursos"
+
+#: pages/default.php:45
+msgid "Known Hyperboria sites"
+msgstr "Sitios conocidos en Hyperboria"
+
+#: pages/status.php:5
+msgid "Status"
+msgstr "Estado"
+
+#: pages/status.php:8
+msgid "Network status"
+msgstr "Estado de la red"
