@@ -32,7 +32,7 @@ msgid "Services"
 msgstr"Как присоединиться"
 
 #: index.php:57
-msgid "Services"
+msgid "Social"
 msgstr"социальный"
 
 #: pages/default.php:6
