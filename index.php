@@ -18,10 +18,8 @@ textdomain($domain);
 <link href="assets/css/prettify.css" rel="stylesheet">
 <link href="assets/css/solarized-dark.css" rel="stylesheet">
 <link rel="shortcut icon" href="/assets/img/favicon.png">
-<!-- Temporary CDN links during development, will be local for production for Hyperboria compatability. -->
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-<!--- TODO: Separate custom bootstrap css into custom.css -->
 <style>
 .top-jumbo {
 	margin-top: 40px;
@@ -50,7 +48,7 @@ textdomain($domain);
 	<li><a href="#social"><?=_("Social")?></a></li>
 
 </ul>
-<!-- Future Dropdown nav for l10n -->
+<!-- Future Dropdown nav for l10n
 <ul class="nav navbar-nav pull-right">
 	<li class="dropdown">
 <a href="/?lang=en_US" class="dropdown-toggle" data-toggle="dropdown">lang: <b>en</b> <b class="caret"></b></a>
@@ -58,7 +56,7 @@ textdomain($domain);
 <li><a href="#">lang: <b>it</b></a></li>
 <li><a href="/?lang=ru_RU">lang: <b>Русский</b></a></li>
 <li><a href="#">lang: <b>fr</b></a></li>
-</ul>
+</ul> -->
 </li>
 
 </ul>
