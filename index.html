@@ -4,9 +4,9 @@
  <meta charset="utf-8">
 <meta name="author" content="github.com/dansup/hyperboria">
 <title>Hyperboria</title>
-<link href="/assets/css/bootstrap.css" rel="stylesheet">
-<link href="/assets/css/prettify.css" rel="stylesheet">
-<link href="/assets/css/solarized-dark.css" rel="stylesheet">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/prettify.css" rel="stylesheet">
+<link href="assets/css/solarized-dark.css" rel="stylesheet">
 <link rel="shortcut icon" href="/assets/img/favicon.png">
 <!-- Temporary CDN links during development, will be local for production for Hyperboria compatability. -->
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
@@ -51,7 +51,7 @@
 <div class="top-jumbo">
 		<div class="col col-lg-3"></div>
 		<div class="col col-lg-2">
-			<img src="/assets/img/top-jumbo.png" style="margin-top:28px;height:84px;width:129px;" alt="Hyperboria network infographic" />
+			<img src="assets/img/top-jumbo.png" style="margin-top:28px;height:84px;width:129px;" alt="Hyperboria network infographic" />
 		</div>
 		<div class="col col-lg-4">
 			<h2>a global meshnet</h2>
@@ -60,27 +60,33 @@
 </div>
 <div class="container" data-spy="scroll" data-target="#navbar-scroll" data-offset="0">
 <div id="overview" class="row">
+<br><br>
 	<div class="page-header">
-		<h1>Overview</h1><p class="lead">Encrypted networking for everyone</p>
+		<h1>Overview</h1>
+		<blockquote>
+		  <p>Encrypted networking for everyone.</p>
+		  <small>Caleb James Delisle <cite title="Source Title">(cjdns author)</cite></small>
+		</blockquote>
 	</div>
 	<div class="col col-lg-2"></div>
-	<div class="col col-lg-2 text-center" style="background-image:url(/assets/img/overview-open.png);width:215px;height:374px;padding-top:200px;">
+	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-open.png);width:215px;height:374px;padding-top:200px;">
 		<h1>Open</h1>
 		<p>Anyone can join by peering with someone already connected.</p>
 	</div>
 	<div class="col col-lg-1"></div>
-	<div class="col col-lg-2 text-center" style="background-image:url(/assets/img/overview-p2p.png);width:215px;height:374px;padding-top:200px;">
+	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-p2p.png);width:215px;height:374px;padding-top:200px;">
 		<h1>P2P</h1>
-		<p>Cjdns is built on the same principles as Kademlia DHT, the network is censorship resistant.</p>
+		<p>Inspired by Kademlia DHT, the network is censorship resistant.</p>
 	</div>
 	<div class="col col-lg-1"></div>
-	<div class="col col-lg-2 text-center" style="background-image:url(/assets/img/overview-secure.png);width:215px;height:374px;padding-top:200px;">
+	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-secure.png);width:215px;height:374px;padding-top:200px;">
 		<h1>Secure</h1>
-		<p>Packets are encrypted end-to-end using a clever public key based on your unique cjdns ipv6 address.</p>
+		<p>Packets are encrypted end-to-end using your unique cjdns ipv6 address.</p>
 	</div>
 </div>
 <div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
 <div id="join" class="row">
+<br><br>
 <div class="page-header">
 		<h1>How do I join?</h1>
 		<p class="lead">Install the cjdns software on a supported device/platform and locate a peer.</p>
@@ -91,9 +97,7 @@
 		<ul id="install" class="nav nav-tabs nav-stacked">
 		<li class="active"><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
 		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
-		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
 		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
-		<li><a href="#android" class="lead" data-toggle="tab">Android</a></li>
 
 
 		</ul>
@@ -102,27 +106,32 @@
 		<div id="installContent" class="tab-content">
 		<div class="tab-pane fade in active" id="ubuntu">
 		<pre class="prettyprint">
-			$ sudo apt-get install cmake git build-essential
-			$ git clone https://github.com/cjdelisle/cjdns.git
-			$ cd cjdns
-			$ ./do
-			$ ./cjdroute
+		<br>
+		$ sudo apt-get install cmake git build-essential
+		$ git clone https://github.com/cjdelisle/cjdns.git
+		$ cd cjdns
+		$ ./do
+		$ ./cjdroute
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="archlinux">
 		<pre class="prettyprint">
-			$ sudo yaourt -S cjdns-git
- 			$ sudo cjdroute --genconf > /etc/cjdroute.conf
-			$ sudo systemctl start cjdns
+		<br>
+		$ sudo yaourt -S cjdns-git
+		$ sudo cjdroute --genconf > /etc/cjdroute.conf
+		$ sudo systemctl start cjdns
 		</pre>
 		</div>
-		<div class="tab-pane fade in" id="fedora">
+		<div class="tab-pane fade in" id="openwrt">
 		<pre class="prettyprint">
-			sudo apt-get install cmake git build-essential
-			git clone https://github.com/cjdelisle/cjdns.git
-			cd cjdns
-			./do
-			./cjdroute
+		<br>
+		$ cd ~
+		$ svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
+		$ cd openwrt
+		$ cp ./feeds.conf.default ./feeds.conf
+		$ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.conf
+		$ ./scripts/feeds update -a
+		$ ./scripts/feeds install cjdns
 		</pre>
 		</div>
 
@@ -132,11 +141,12 @@
 </div>
 <div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
 <div id="services" class="row">
+<br><br>
 	<div class="page-header">
 		<h1>Services</h1><p class="lead">Early settlers have established services like irc, forums and social networks and users are presented with an experience typically without advertisements, 3rd party resources (analytics/tracking) or malicous websites.</p>
 	</div>
-	<div class="col col-lg-2"></div>
-	<div class="col col-lg-8">
+	<div class="col col-lg-1"></div>
+	<div class="col col-lg-10">
 		<div class="accordion" id="services">
 		<div class="accordion-group">
 		<div class="accordion-heading" style="background-color:#996699;">
@@ -146,17 +156,47 @@
 		</div>
 		<div id="services-web" class="accordion-body collapse in">
 		<div class="accordion-inner well" style="margin:40px;padding:40px;">
-		<ul class="text-left">
-			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li ><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li class="pull-right"><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-			<li><a href="#" rel="nofollow">NodeInfo</a><br><p class="text-muted">a registry of nodes</p></li>
-
-		</ul>
+			<table class="table table-bordered">
+			<thead>
+			<tr>
+			<th>Website</th>
+			<th>Description</th>
+			<th>Maintainer</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td><h5><a href="http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html" rel="nofollow">http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html</a></h5></td>
+			<td>iRcann - the info.cern.ch of Hyperboria</td>
+			<td><a href="http://socialno.de/ircerr">@ircerr</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]" rel="nofollow">http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]</a></h5></td>
+			<td>NodeInfo - your flashlight in the darknet</td>
+			<td><a href="http://socialno.de/mikey" rel="nofollow">@mikey</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://uppit.us" rel="nofollow">http://uppit.us</h5></td>
+			<td>Uppit - a reddit powered community</td>
+			<td><a href="http://socialno.de/dan" rel="nofollow">@dan</a> and <a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://urlcloud.net" rel="nofollow">http://urlcloud.net</h5></td>
+			<td>urlcloud - simple file sharing for Hyperboria</td>
+			<td><a href="http://socialno.de/derp" rel="nofollow">@derp</a></td>
+			</tr>
+			<tr>
+			<td><h5><a href="http://socialno.de" rel="nofollow">http://socialno.de</h5></td>
+			<td>socialnode - a micro blogging service exclusive to Hyperboria</td>
+			<td><a href="http://socialno.de/derp" rel="nofollow">@derp</a></td>
+			</tr>
+			<tr>
+			<td colspan="3">
+			<a href="https://wiki.projectmeshnet.org/Known_Hyperboria_sites">view more websites</a>
+			</td>
+			</tr>
+			</tbody>
+			</table>
 
 		</div>
 		</div>
@@ -179,6 +219,7 @@
 <div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
 <!-- Statistics will be basic initially until I write a more complex backend for collecting various data -->
 <div id="stats" class="row">
+<br><br>
 	<div class="page-header">
 		<h1>Stats</h1><p class="lead">In the past 30 days <b>$DailyAvg</b> have joined the network.</p>
 	</div>
@@ -202,8 +243,8 @@
 </div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
-<script src="/assets/js/bootstrap.js"></script>
-<script src="/assets/js/prettify.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/prettify.js"></script>
 <script type="text/javascript">
 	(function(jQuery){
 	  jQuery( document ).ready( function() {
