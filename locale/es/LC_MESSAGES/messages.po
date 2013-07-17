@@ -1,8 +1,6 @@
-# Hyperboria.net Russian translation
+# Hyperboria.net Spanish translation
 # Copyright (C) 2012 Project Meshnet
-# This file is distributed under the same license as the Hyperboria.net package.
-# Komachi Onozuka <komachi.onozuka@ya.ru>, 2012.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: Hyperboria.net\n"
