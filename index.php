@@ -70,41 +70,41 @@ textdomain($domain);
 		</div>
 		<div class="col col-lg-4">
 			<h2><?=_("a global meshnet")?></h2>
-			<h3>powered by <a href="https://github.com/cjdelisle/cjdns">cjdns</a> nodes</h3>
+			<h3><?=_("powered by")?> <a href="https://github.com/cjdelisle/cjdns">cjdns</a> <?=_("nodes")?></h3>
 	</div>
 </div>
 <div class="container" data-spy="scroll" data-target="#navbar-scroll" data-offset="0">
 <div id="overview" class="row">
 <br><br>
 	<div class="page-header">
-		<h1>Overview</h1>
+		<h1><?=_("Overview")?></h1>
 		<blockquote>
-		  <p>Encrypted networking for everyone.</p>
-		  <small>Caleb James Delisle <cite title="Source Title">(cjdns author)</cite></small>
+		  <p><?=_("Encrypted networking for everyone.")?></p>
+		  <small>Caleb James Delisle <cite title="Source Title">(cjdns <?=_("author")?>)</cite></small>
 		</blockquote>
 	</div>
 	<div class="col col-lg-2"></div>
 	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-open.png);width:215px;height:374px;padding-top:200px;">
-		<h1>Open</h1>
-		<p>Anyone can join by peering with someone already connected.</p>
+		<h1>><?=_("Open")?></h1>
+		<p><?=_("Anyone can join by peering with someone already connected.")?></p>
 	</div>
 	<div class="col col-lg-1"></div>
 	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-p2p.png);width:215px;height:374px;padding-top:200px;">
-		<h1>P2P</h1>
-		<p>Inspired by Kademlia DHT, the network is censorship resistant.</p>
+		<h1><?=_("P2P")?></h1>
+		<p><?=_("Inspired by Kademlia DHT, the network is censorship resistant.")?></p>
 	</div>
 	<div class="col col-lg-1"></div>
 	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-secure.png);width:215px;height:374px;padding-top:200px;">
-		<h1>Secure</h1>
-		<p>Packets are encrypted end-to-end using your unique cjdns ipv6 address.</p>
+		<h1><?=_("Secure")?></h1>
+		<p><?=_("Packets are encrypted end-to-end using your unique cjdns ipv6 address.")?></p>
 	</div>
 </div>
 <div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
 <div id="join" class="row">
 <br><br>
 <div class="page-header">
-		<h1>How do I join?</h1>
-		<p class="lead">Install the cjdns software on a supported device/platform and locate a peer via <a href="https://chat.projectmeshnet.org/#projectmeshnet" rel="nofollow">IRC</a> or <a href="http://atlas.projectmeshnet.org">the global map</a>.</p>
+		<h1><?=_("How do I join?")?></h1>
+		<p class="lead"><?=_('Install the cjdns software on a supported device/platform and locate a peer via <a href="https://chat.projectmeshnet.org/#projectmeshnet" rel="nofollow">IRC</a> or <a href="http://atlas.projectmeshnet.org">the global map</a>.')?></p>
 	</div>	
 	<div class="col col-lg-1">
 	</div>
@@ -229,7 +229,7 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 <div id="services" class="row">
 <br><br>
 	<div class="page-header">
-		<h1>Services</h1><p class="lead">A few popular websites and services available on the network.</p>
+		<h1><?=_("Services")?></h1><p class="lead"><?=_("A few popular websites and services available on the network.")?></p>
 	</div>
 	<div class="col col-lg-1"></div>
 	<div class="col col-lg-10">
@@ -237,7 +237,7 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 		<div class="accordion-group">
 		<div class="accordion-heading" style="background-color:#996699;">
         <a class="accordion-toggle" style="color:#E4E4E4;font-size:30px;" data-toggle="collapse" data-parent="#services" href="#services-web">
-		Websites
+		<?=_("Websites")?>
 		</a>
 		</div>
 		<div id="services-web" class="accordion-body collapse in">
@@ -245,40 +245,40 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 			<table class="table table-bordered">
 			<thead>
 			<tr>
-			<th>Website</th>
-			<th>Description</th>
-			<th>Maintainer</th>
+			<th><?=_("Website")?></th>
+			<th><?=_("Description")?></th>
+			<th><?=_("Maintainer")?></th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
 			<td><h5><a href="http://uppit.us" rel="nofollow">http://uppit.us</h5></td>
-			<td>Uppit - a reddit powered community</td>
+			<td><?=_("Uppit - a reddit powered community")?></td>
 			<td><a href="http://socialno.de/dan" rel="nofollow">@dan</a> and <a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://cjdns.ezcrypt.it" rel="nofollow">http://<b>cjdns</b>.ezcrypt.it</h5></td>
-			<td>EZcrypt - encrypted pastebin</td>
+			<td><?=_("EZcrypt - encrypted pastebin")?></td>
 			<td>novaking</td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://socialno.de" rel="nofollow">http://socialno.de</h5></td>
-			<td>socialnode - a micro blogging service exclusive to Hyperboria</td>
+			<td><?=_("socialnode - a micro blogging service exclusive to Hyperboria")?></td>
 			<td><a href="http://socialno.de/derp" rel="nofollow">@derp</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html" rel="nofollow">http://[fc38:4c2c:1a8f:3981:f2e7:c2b9:6870:6e84]/cjdns.html</a></h5></td>
-			<td>iRcann - the info.cern.ch of Hyperboria</td>
+			<td><?=_("iRcann - the info.cern.ch of Hyperboria")?></td>
 			<td><a href="http://socialno.de/ircerr">@ircerr</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]" rel="nofollow">http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]</a></h5></td>
-			<td>NodeInfo - your flashlight in the darknet</td>
+			<td><?=_("NodeInfo - your flashlight in the darknet")?></td>
 			<td><a href="http://socialno.de/mikey" rel="nofollow">@mikey</a></td>
 			</tr>
 			<tr>
 			<td colspan="3">
-			<a href="https://wiki.projectmeshnet.org/Known_Hyperboria_sites#Websites">view more websites</a>
+			<a href="https://wiki.projectmeshnet.org/Known_Hyperboria_sites#Websites"><?=_("view more websites")?></a>
 			</td>
 			</tr>
 			</tbody>
@@ -297,35 +297,35 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 		<table class="table table-bordered">
 			<thead>
 			<tr>
-			<th>Service</th>
-			<th>Description</th>
-			<th>Maintainer</th>
+			<th><?=_("Service")?></th>
+			<th><?=_("Description")?></th>
+			<th><?=_("Maintainer")?></th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
 			<td><h5><a href="hpk://hyperboria.thefinn93.com:11371" rel="nofollow">hpk://hyperboria.thefinn93.com:11371</h5></td>
-			<td>OpenPGP Keyserver</td>
+			<td><?=_("OpenPGP Keyserver")?></td>
 			<td><a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://hyperboria.name" rel="nofollow">http://hyperboria.name</h5></td>
-			<td>Hyperboria.name - free mail and subdomain service</td>
+			<td><?=_("Hyperboria.name - free mail and subdomain service")?></td>
 			<td><a href="http://socialno.de/grundy" rel="nofollow">@grundy</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://hypebox.net" rel="nofollow">http://hypebox.net</h5></td>
-			<td>HypeBox.net - a blogging platform exclusive to Hyperboria</td>
+			<td><?=_("HypeBox.net - a blogging platform exclusive to Hyperboria")?></td>
 			<td><a href="http://socialno.de/jph" rel="nofollow">@jph</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://hypeirc.net" rel="nofollow">http://hypeirc.net</a></h5></td>
-			<td>HypeIRC - the IRC network of Hyperboria</td>
+			<td><?=_("HypeIRC - the IRC network of Hyperboria")?></td>
 			<td><a href="http://socialno.de/derp">@derp</a>, <a href="http://socialno.de/prurigro">@prurigro</a>, <a href="http://socialno.de/jercos">@jercos</a>, and <a href="http://socialno.de/cjd">@cjd</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]/hypedns" rel="nofollow">http://[fc5d:baa5:61fc:6ffd:9554:67f0:e290:7535]/HypeDNS</a></h5></td>
-			<td>HypeDNS - dns for Hyperboria</td>
+			<td><?=_("HypeDNS - dns for Hyperboria")?></td>
 			<td><a href="http://socialno.de/mikey" rel="nofollow">@mikey</a></td>
 			</tr>
 			<tr>
@@ -346,7 +346,7 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 <div id="social" class="row">
 <br><br>
 	<div class="page-header">
-		<h1>Social</h1><p class="lead">Insight into #hyperboria, help spread the word!</p>
+		<h1>Social</h1><p class="lead"><?=_("Insight into #hyperboria, help spread the word!")?></p>
 	</div>
 	<div class="col col-lg-2"></div>
 	<div class="col col-lg-4">
