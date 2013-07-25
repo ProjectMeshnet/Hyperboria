@@ -1,0 +1,167 @@
+# Hyperboria.net german translation.
+# Copyright (C) 2013
+# This file is distributed under the same license as the Hyperboria.net package.
+# Pappnaas Pitter pappnaas@hyperboria.name, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-19 13:43+0200\n"
+"PO-Revision-Date: 2013-07-19 21:18+0200\n"
+"Last-Translator: Pappnaas Pitter <pappnaas@hyperboria.name\n"
+"Language-Team: \n"
+"Language: german\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: index.php:45 index.php:80
+msgid "Overview"
+msgstr "Überblick"
+
+#: index.php:46
+msgid "How to join"
+msgstr "Mitmachen"
+
+#: index.php:47 index.php:232
+msgid "Services"
+msgstr "Dienste"
+
+#: index.php:48
+msgid "Social"
+msgstr "Social Media"
+
+#: index.php:72
+msgid "a global meshnet"
+msgstr "Ein globales Meshnet"
+
+#: index.php:73
+msgid "powered by"
+msgstr "auf Basis von"
+
+#: index.php:73
+msgid "nodes"
+msgstr "Nodes"
+
+#: index.php:82
+msgid "Encrypted networking for everyone."
+msgstr "Verschlüsselte Netzwerke für Alle."
+
+#: index.php:83
+msgid "author"
+msgstr "Autor"
+
+#: index.php:88
+msgid "Open"
+msgstr "Offen"
+
+#: index.php:89
+msgid "Anyone can join by peering with someone already connected."
+msgstr "Jeder kann mitmachen, indem er sich mit vorhandenen Nodes verbindet."
+
+#: index.php:93
+msgid "P2P"
+msgstr "P2P"
+
+#: index.php:94
+msgid "Inspired by Kademlia DHT, the network is censorship resistant."
+msgstr "Inspiriert von Kademlia DHT, dem zensurresistentem Netzwerk"
+
+#: index.php:98
+msgid "Secure"
+msgstr "Sicher"
+
+#: index.php:99
+msgid "Packets are encrypted end-to-end using your unique cjdns ipv6 address."
+msgstr "Pakete werden mit Deiner einzigartigen IPv6 Adresse Ende-zu-Ende verschlüsselt"
+
+#: index.php:106
+msgid "How do I join?"
+msgstr "Wie kann ich mitmachen?"
+
+#: index.php:107
+msgid ""
+"Install the cjdns software on a supported device/platform and locate a peer "
+"via <a href=\"https://chat.projectmeshnet.org/#projectmeshnet\" rel="
+"\"nofollow\">IRC</a> or <a href=\"http://atlas.projectmeshnet.org\">the "
+"global map</a>."
+msgstr ""
+"Installiere die cjdns Software auf einer unterstützten Plattform und finde einen Peer "
+"über <a href=\"https://chat.projectmeshnet.org/#projectmeshnet\" rel="
+"\"nofollow\">IRC</a> oder <a href=\"http://atlas.projectmeshnet.org\"> die "
+"Weltkarte</a>."
+
+
+#: index.php:232
+msgid "A few popular websites and services available on the network."
+msgstr "Einige der beliebtesten Webseiten und Dienste, die auf dich warten."
+
+#: index.php:240
+msgid "Websites"
+msgstr "Webseiten"
+
+#: index.php:248
+msgid "Website"
+msgstr "Webseite"
+
+#: index.php:249 index.php:301
+msgid "Description"
+msgstr "Beschreibung"
+
+#: index.php:250 index.php:302
+msgid "Maintainer"
+msgstr "Betreiber"
+
+#: index.php:256
+msgid "Uppit - a reddit powered community"
+msgstr "Uppit - eine Community auf reddit Basis"
+
+#: index.php:261
+msgid "EZcrypt - encrypted pastebin"
+msgstr "EZcrypt - verschlüsseltes Pastebin"
+
+#: index.php:266
+msgid "socialnode - a micro blogging service exclusive to Hyperboria"
+msgstr "socialnode - ein nur in Hyperboria verfügbarer Microbloggingdienst"
+
+#: index.php:271
+msgid "iRcann - the info.cern.ch of Hyperboria"
+msgstr "iRcann - Das info.cern.ch von Hyperboria"
+
+#: index.php:276
+msgid "NodeInfo - your flashlight in the darknet"
+msgstr "NodeInfo - Deine Taschenlampe im Darknet"
+
+#: index.php:281
+msgid "view more websites"
+msgstr "mehr Webseiten"
+
+#: index.php:300
+msgid "Service"
+msgstr "Dienste"
+
+#: index.php:308
+msgid "OpenPGP Keyserver"
+msgstr "OpenPGP Schlüsselserver"
+
+#: index.php:313
+msgid "Hyperboria.name - free mail and subdomain service"
+msgstr "Hyperboria.name - Freemail und Subdomain Dienst"
+
+#: index.php:318
+msgid "HypeBox.net - a blogging platform exclusive to Hyperboria"
+msgstr "HypeBox.net - Eine nur in Hyperboria verfügbare Blogging Plattform"
+
+#: index.php:323
+msgid "HypeIRC - the IRC network of Hyperboria"
+msgstr "HypeIRC - Das Hyperboria IRC Netzwerk"
+
+#: index.php:328
+msgid "HypeDNS - dns for Hyperboria"
+msgstr "HypeDNS - DNS für Hyperboria"
+
+#: index.php:349
+msgid "Insight into #hyperboria, help spread the word!"
+msgstr "Verfolge #hyperboria, hilf uns die Bekanntheit zu steigern!"
