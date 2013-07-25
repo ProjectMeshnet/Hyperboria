@@ -114,8 +114,8 @@ textdomain($domain);
 		<li><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
 		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
 		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
-		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
 		<li><a href="#gentoo" class="lead" data-toggle="tab">Gentoo</a></li>
+		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
 
 
 		</ul>
@@ -181,21 +181,6 @@ git clone https://github.com/cjdelisle/cjdns.git
 ./cjdroute
 		</pre>
 		</div>
-		<div class="tab-pane fade in" id="openwrt">
-		<pre class="prettyprint">
-#Building cjdns from source on OpenWRT
-#created by @cjd
-
-cd ~
-svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
-cd openwrt
-cp ./feeds.conf.default ./feeds.conf
-echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.conf
-./scripts/feeds update -a
-./scripts/feeds install cjdns
-		</pre>
-		</div>
-
                 <div class="tab-pane fade in" id="gentoo">
                 <pre class="prettyprint">
 #Building cjdns with Gentoo Portage
@@ -216,6 +201,20 @@ emerge -avu cjdns
 systemctl start cjdns
                 </pre>
                 </div>
+		<div class="tab-pane fade in" id="openwrt">
+		<pre class="prettyprint">
+#Building cjdns from source on OpenWRT
+#created by @cjd
+
+cd ~
+svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
+cd openwrt
+cp ./feeds.conf.default ./feeds.conf
+echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.conf
+./scripts/feeds update -a
+./scripts/feeds install cjdns
+		</pre>
+		</div>
                   
 		</div>
 
