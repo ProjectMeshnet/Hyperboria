@@ -136,52 +136,25 @@ cd cjdns
 		</div>
 		<div class="tab-pane fade in" id="ubuntu">
 		<pre class="prettyprint">
-#Building cjdns from source on Ubuntu
-#created by @thefinn93
+#Installing cjdns from PPA on Ubuntu
+#Not official - maintained by https://launchpad.net/~shnatsel
 
-#This installation method is described in the cjdns documentation and is recommended by the Project Meshnet coordinators.
-#Note that most of this takes place in the Terminal. The Ubuntu wiki explains how to open it, if you are not sure how.
-#Updating system
-#As a preliminary stage, it is advisable to update all the packages to their latest versions. This is done by issuing
-$ sudo apt-get update && sudo apt-get upgrade
-#in the terminal.
-#Installing dependencies
-#Compiling cjdns from source requires some dependencies. The following packages are build-time dependencies, i.e. they are only needed for the build process and interaction with GitHub, and can be safely removed upon completion.
-#To install the dependencies, type
-$ sudo apt-get install build-essential git libevent-dev cmake
-#Fetching sources
-#This guide assumes that cjdns is built in the /opt directory. To download the latest snapshot of the cjdns source code] from GitHub, issue
-$ cd /opt
-$ sudo git clone https://github.com/cjdelisle/cjdns.git
-$ cd cjdns
-#Actual build
-#The following will download and build cmake (in case the correct version is not installed), build cjdns and run some tests to make sure it works correctly.
-$ sudo ./do
-#Compilation is now complete. A successful build should produce the following message:
-#Build completed successfully, type ./cjdroute to begin setup.
-#The build will produce an executable, named cjdroute, in /opt/cjdns.
-#Configuring cjdns
+#See Debian instructions are the official method,
+#but if you use them you'll have to keep the installation up to date manually.
 
-#Creating config file
-#Running the following command will create a new configuration file, which contains a private key, a public key, and a corresponding IPv6 address.
-./cjdroute --genconf > /tmp/cjdroute.conf     # Generates the configuration file
-#It is a good practice[1] to store system-wide configuration files in the /etc tree hierarchy.
-#To move the newly-created configuration file to its permanent location, issue
-sudo mv /tmp/cjdroute.conf /etc/cjdroute.conf
-#For security reasons, the config file should be owned by the superuser, and not accessible to others. This is accomplished by running
-sudo chown root:root /etc/cjdroute.conf
-sudo chmod 600 /etc/cjdroute.conf
-#Adding peers
-#Main article: How To Add Peers
-#Since cjdns is a friend-to-friend network, new/potential users will need to request connection credentials from the owners of the existing nodes. Currently, IRC is the communication media most widely used to find peers.
-#After the connection credentials are obtained[Note 1], they are added to the config file with this command:
-$ sudo gnome-text-editor /etc/cjdroute.conf
-#[Note 2]
-#Running cjdroute manually
-#There are two ways to start cjdroute. The first is by typing
-$ sudo ./cjdroute < /etc/cjdroute.conf
-#and the second one is by adding it to the auto-start script (discussed in the next section). cjdroute will run as daemon until next reboot or until stopped by issuing
-$ sudo killall cjdroute
+#Enter the following commands in Terminal:
+sudo add-apt-repository -y ppa:shnatsel/cjdns
+sudo apt-get update
+sudo apt-get install -y cjdns
+
+#cjdns is a friend-to-friend network, so you need to ask somebody 
+#See https://github.com/cjdelisle/cjdns#2-find-a-friend for more info
+#Run the following to open the config file:
+sudo gnome-text-editor /etc/cjdroute.conf
+#Enter your friend's info and then run:
+sudo restart cjdns
+#That's it!
+
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="archlinux">
