@@ -140,7 +140,7 @@ cd cjdns
 #Installing cjdns from PPA on Ubuntu
 #maintained by https://launchpad.net/~shnatsel
 
-#See Debian instructions are the official method,
+#See Debian instructions to build from source,
 #but in that case cjdns won't autostart on boot
 #and you'll have to keep the installation up to date manually.
 
