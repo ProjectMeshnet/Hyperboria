@@ -151,10 +151,10 @@ sudo apt-get install -y cjdns
 #See https://github.com/cjdelisle/cjdns#2-find-a-friend for more info
 #Run the following to open the config file:
 sudo gnome-text-editor /etc/cjdroute.conf
-#Enter your friend's info and then run:
+#Enter your friend's info and save the file.
+
 sudo restart cjdns
 #That's it!
-
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="archlinux">
