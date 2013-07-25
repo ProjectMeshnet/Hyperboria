@@ -133,6 +133,15 @@ git clone https://github.com/cjdelisle/cjdns.git
 cd cjdns
 ./do
 ./cjdroute
+#and follow the instructions cjdroute prints.
+
+#To make cjdns autostart on boot:
+sed -ir "s|^#CJDPATH=.*$|CJDPATH=$(dirname $(pwd))|" scripts/cjdns
+sudo cp -i scripts/cjdns /etc/default/cjdns
+sudo ln -is "$(pwd)/"scripts/cjdns.sh /etc/init.d/cjdns
+
+#Be sure to update cjdns at least weekly:
+sudo /etc/init.d/cjdns update
 		</pre>
 		</div>
 		<div class="tab-pane fade in" id="ubuntu">
