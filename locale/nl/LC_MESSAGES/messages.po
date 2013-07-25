@@ -15,89 +15,22 @@ msgstr ""
 "Language-Team: \n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: index.php:81
+#: index.php:80
 msgid "a global meshnet"
 msgstr "een globaal meshnet"
 
-#: index.php:54
+#: index.php:45
 msgid "Overview"
 msgstr "Overzicht"
 
-#: index.php:55
+#: index.php:46
 msgid "How to join"
 msgstr "Hoe deelnemen"
 
-#: index.php:56
+#: index.php:47
 msgid "Services"
 msgstr "Diensten"
 
-#: index.php:57
+#: index.php:48
 msgid "Social"
 msgstr "Sociaal"
-
-#: pages/default.php:6
-msgid ""
-"<b>Hyperboria</b> is the first and only CJDNS powered decentralized network."
-msgstr ""
-"<b>Hyperboria</b> is het eerste en enige CJDNS-gebaseerde, "
-"gedecentraliseerde netwerk."
-
-#: pages/default.php:7
-msgid "Learn more"
-msgstr "Meer informatie"
-
-#: pages/default.php:16
-msgid "A new kind of network."
-msgstr "Een nieuw soort netwerk."
-
-#: pages/default.php:19
-msgid "You can also learn more about"
-msgstr "Je kan ook meer leren over "
-
-#: pages/default.php:19
-msgid "on MeshWiki."
-msgstr "op MeshWiki."
-
-#: pages/default.php:27
-msgid "You are connected!"
-msgstr "Je bent verbonden!"
-
-#: pages/default.php:28
-msgid "You might want to checkout"
-msgstr "Neem ook eens een kijke op "
-
-#: pages/default.php:32
-msgid "Trouble connecting?"
-msgstr "Problemen met verbinden?"
-
-#: pages/default.php:33
-msgid ""
-"Take a look at the <a href=\"https://wiki.projectmeshnet.org/"
-"CJDNS_Troubleshooting\">troubleshooting guide</a>!"
-msgstr ""
-"Neem een kijkje in de <a href=\"https://wiki.projectmeshnet.org/"
-"CJDNS_Troubleshooting\">probleemoplossingsgids</a>!"
-
-#: pages/default.php:34
-msgid "Still can't figure it out? Come chat with us on"
-msgstr "Lukt het nog altijd niet? Kom met ons chatten op "
-
-#: pages/default.php:34
-msgid "where we can help you."
-msgstr "waar we je kunnen helpen."
-
-#: pages/default.php:42
-msgid "Resources"
-msgstr "Hulpmiddelen"
-
-#: pages/default.php:45
-msgid "Known Hyperboria sites"
-msgstr "Gekende Hyperboria sites"
-
-#: pages/status.php:5
-msgid "Status"
-msgstr "Status"
-
-#: pages/status.php:8
-msgid "Network status"
-msgstr "Netwerkstatus"
