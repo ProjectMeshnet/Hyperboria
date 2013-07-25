@@ -65,8 +65,8 @@ textdomain($domain);
 </div>
 <div class="top-jumbo">
 		<div class="col col-lg-3"></div>
-		<div class="col col-lg-2">
-			<img src="assets/img/top-jumbo.png" style="margin-top:28px;height:84px;width:129px;" alt="Hyperboria network infographic" />
+		<div class="col col-lg-2" style="margin-top:28px;">
+			<img src="assets/img/top-jumbo.png" class="hidden-sm" style="height:84px;width:129px;" alt="Hyperboria network infographic" />
 		</div>
 		<div class="col col-lg-4">
 			<h2><?=_("a global meshnet")?></h2>
@@ -106,119 +106,13 @@ textdomain($domain);
 		<h1><?=_("How do I join?")?></h1>
 		<p class="lead"><?=_('Install the cjdns software on a supported device/platform and locate a peer via <a href="https://chat.projectmeshnet.org/#projectmeshnet" rel="nofollow">IRC</a> or <a href="http://atlas.projectmeshnet.org">the global map</a>.')?></p>
 	</div>	
-	<div class="col col-lg-1">
-	</div>
 	<div class="col col-lg-2">
-		<ul id="install" class="nav nav-tabs nav-stacked">
-		<li class="active"><a href="#debian" class="lead" data-toggle="tab">Debian</a></li>
-		<li><a href="#ubuntu" class="lead" data-toggle="tab">Ubuntu</a></li>
-		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
-		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
-		<li><a href="#gentoo" class="lead" data-toggle="tab">Gentoo</a></li>
-		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
-
-
-		</ul>
 	</div>
 	<div class="col col-lg-8">
-		<div id="installContent" class="tab-content">
-
-		<div class="tab-pane fade in active" id="debian">
-		<pre class="prettyprint">
-#Building cjdns from source on Debian
-#created by @cjd
-
-sudo apt-get install cmake git build-essential
-git clone https://github.com/cjdelisle/cjdns.git
-cd cjdns
-./do
-./cjdroute
-		</pre>
-		</div>
-		<div class="tab-pane fade in" id="ubuntu">
-		<pre class="prettyprint">
-#Installing cjdns from PPA on Ubuntu
-#maintained by https://launchpad.net/~shnatsel
-
-#See Debian instructions to build from source,
-#but in that case cjdns won't autostart on boot
-#and you'll have to keep the installation up to date manually.
-
-#Enter the following commands in Terminal:
-sudo add-apt-repository -y ppa:shnatsel/cjdns
-sudo apt-get update
-sudo apt-get install -y cjdns
-
-#cjdns is a friend-to-friend network, so you need to ask somebody 
-#See https://github.com/cjdelisle/cjdns#2-find-a-friend for more info
-#Run the following to open the config file:
-sudo gnome-text-editor /etc/cjdroute.conf
-#Enter your friend's info and save the file.
-
-sudo restart cjdns
-#That's it!
-		</pre>
-		</div>
-		<div class="tab-pane fade in" id="archlinux">
-		<pre class="prettyprint">
-#Building cjdns from source on ArchLinux
-#created by @prurigro
-
-sudo yaourt -S cjdns-git
-sudo cjdroute --genconf > /etc/cjdroute.conf
-sudo systemctl start cjdns
-		</pre>
-		</div>
-		<div class="tab-pane fade in" id="fedora">
-		<pre class="prettyprint">
-#Building cjdns from source on Fedora
-#created by @reptoidz
-
-yum install @development-tools
-yum install cmake
-git clone https://github.com/cjdelisle/cjdns.git
-./do
-./cjdroute
-		</pre>
-		</div>
-                <div class="tab-pane fade in" id="gentoo">
-                <pre class="prettyprint">
-#Building cjdns with Gentoo Portage
-# created by @emery
-
-# Prepare layman and fetch overlay
-USE="git" emerge -u layman
-echo "source /var/lib/layman/make.conf" >> /etc/portage/make.conf
-layman -a emery
-
-# emerge cjdns
-emerge -avu cjdns
-
-# Start OpenRC service
-/etc/init.d/cjdns start
-
-# Start SystemD unit
-systemctl start cjdns
-                </pre>
-                </div>
-		<div class="tab-pane fade in" id="openwrt">
-		<pre class="prettyprint">
-#Building cjdns from source on OpenWRT
-#created by @cjd
-
-cd ~
-svn co svn://svn.openwrt.org/openwrt/trunk/ openwrt
-cd openwrt
-cp ./feeds.conf.default ./feeds.conf
-echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.conf
-./scripts/feeds update -a
-./scripts/feeds install cjdns
-		</pre>
-		</div>
-                  
-		</div>
-
-</div>
+    <a href="https://github.com/cjdelisle/cjdns" class="lead">Build cjdns from source (offical)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="https://wiki.projectmeshnet.org/Install_on_Ubuntu" class="lead">Ubuntu install guide (by Project Meshnet)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://wiki.projectmeshnet.org/Install_on_ArchLinux" class="lead">Archlinux install guide (by Project Meshnet)</a>
+	</div>
 </div>
 <div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
 <div id="services" class="row">
