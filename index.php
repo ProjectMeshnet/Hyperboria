@@ -44,7 +44,7 @@ textdomain($domain);
 <ul class="nav navbar-nav">
 	<li><a href="#overview"><?=_("Overview")?></a></li>
 	<li><a href="#join"><?=_("How to join")?></a></li>
-	<li><a href="#services"><?=_("Services")?></a></li>
+	<li class="visible-lg"><a href="#services"><?=_("Services")?></a></li>
 	<li><a href="#social"><?=_("Social")?></a></li>
 
 </ul>
@@ -74,7 +74,14 @@ textdomain($domain);
 	</div>
 </div>
 <div class="container" data-spy="scroll" data-target="#navbar-scroll" data-offset="0">
-<div id="overview" class="row">
+<div id="overview" class="row hidden-lg">
+		<div class="page-header">
+		<h1><?=_("Overview")?></h1>
+	</div>
+	<h2>Encrypted networking for everyone.</h2>
+	<p>Hyperboria is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentraliation at the core. Anyone can participate in the network by locating a peer that is already connected.</p>
+</div>
+<div id="overview" class="row visible-lg">
 <br><br>
 	<div class="page-header">
 		<h1><?=_("Overview")?></h1>
@@ -83,9 +90,11 @@ textdomain($domain);
 		  <small>Caleb James Delisle <cite title="Source Title">(cjdns <?=_("author")?>)</cite></small>
 		</blockquote>
 	</div>
+	<p class="lead">Hyperboria is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentraliation at the core. Anyone can participate in the network by locating a peer that is already connected.</p>
+	<br><br><br>
 	<div class="col col-lg-2"></div>
 	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-open.png);width:215px;height:374px;padding-top:200px;">
-		<h1>><?=_("Open")?></h1>
+		<h1><?=_("Open")?></h1>
 		<p><?=_("Anyone can join by peering with someone already connected.")?></p>
 	</div>
 	<div class="col col-lg-1"></div>
@@ -106,16 +115,16 @@ textdomain($domain);
 		<h1><?=_("How do I join?")?></h1>
 		<p class="lead"><?=_('Install the cjdns software on a supported device/platform and locate a peer via <a href="https://chat.projectmeshnet.org/#projectmeshnet" rel="nofollow">IRC</a> or <a href="http://atlas.projectmeshnet.org">the global map</a>.')?></p>
 	</div>	
-	<div class="col col-lg-2">
+	<div class="col col-lg-2 visible-lg">
 	</div>
 	<div class="col col-lg-8">
-    <a href="https://github.com/cjdelisle/cjdns" class="lead">Build cjdns from source (offical)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<a href="https://wiki.projectmeshnet.org/Install_on_Ubuntu" class="lead">Ubuntu install guide (by Project Meshnet)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="https://wiki.projectmeshnet.org/Install_on_ArchLinux" class="lead">Archlinux install guide (by Project Meshnet)</a>
+    <a href="https://github.com/cjdelisle/cjdns" class="btn btn-primary">Build cjdns from source (official instructions)</a><br><br>
+	<a href="https://wiki.projectmeshnet.org/Install_on_Ubuntu" class="btn btn-default">Ubuntu install guide (by thefinn93)</a><br><br>
+    <a href="https://wiki.projectmeshnet.org/Install_on_ArchLinux" class="btn btn-default">Archlinux install guide (by prurigro)</a>
 	</div>
 </div>
-<div class="row"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
-<div id="services" class="row">
+<div class="row visible-lg"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
+<div id="services" class="row visible-lg">
 <br><br>
 	<div class="page-header">
 		<h1><?=_("Services")?></h1><p class="lead"><?=_("A few popular websites and services available on the network.")?></p>
@@ -146,9 +155,9 @@ textdomain($domain);
 			<td><a href="http://socialno.de/dan" rel="nofollow">@dan</a> and <a href="http://socialno.de/thefinn93" rel="nofollow">@thefinn93</a></td>
 			</tr>
 			<tr>
-			<td><h5><a href="http://cjdns.ezcrypt.it" rel="nofollow">http://<b>cjdns</b>.ezcrypt.it</h5></td>
-			<td><?=_("EZcrypt - encrypted pastebin")?></td>
-			<td>novaking</td>
+			<td><h5><a href="http://hypeoverflow.com/" rel="nofollow">http://hypeoverflow.com/</h5></td>
+			<td>HypeOverflow - a stack overflow clone </td>
+			<td><a href="http://socialno.de/tyler" rel="nofollow">@tyler</a></td>
 			</tr>
 			<tr>
 			<td><h5><a href="http://socialno.de" rel="nofollow">http://socialno.de</h5></td>
@@ -283,6 +292,21 @@ textdomain($domain);
 	  } );
 	}(jQuery))
 </script>
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
 
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.projectmeshnet.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "10"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+<img src="https://analytics.projectmeshnet.org/piwik.php?idsite=10&amp;rec=1" style="border:0" alt="" />
+</noscript>
 </body>
 </html>
