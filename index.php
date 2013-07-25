@@ -137,7 +137,7 @@ cd cjdns
 		<div class="tab-pane fade in" id="ubuntu">
 		<pre class="prettyprint">
 #Installing cjdns from PPA on Ubuntu
-#Not official - maintained by https://launchpad.net/~shnatsel
+#maintained by https://launchpad.net/~shnatsel
 
 #See Debian instructions are the official method,
 #but in that case cjdns won't autostart on boot
