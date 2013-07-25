@@ -126,7 +126,7 @@ textdomain($domain);
 		<div class="accordion-group">
 		<div class="accordion-heading" style="background-color:#996699;">
         <a class="accordion-toggle" style="color:#E4E4E4;font-size:30px;" data-toggle="collapse" data-parent="#services" href="#services-web">
-		<?=_("Websites")?>
+		<?=_("Websites")?> <span class="pull-right text-muted"><small>(click to collapse)</small></span>
 		</a>
 		</div>
 		<div id="services-web" class="accordion-body collapse in">
@@ -178,7 +178,7 @@ textdomain($domain);
 		<div class="accordion-group">
 		<div class="accordion-heading" style="background-color:#996699;">
         <a class="accordion-toggle" style="color:#E4E4E4;font-size:30px;" data-toggle="collapse" data-parent="#services" href="#services-srv">
-		Services
+		Services <span class="pull-right text-muted"><small>(click to show)</small></span>
 		</a>
 		</div>
 		<div id="services-srv" class="accordion-body collapse">
