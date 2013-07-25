@@ -140,7 +140,8 @@ cd cjdns
 #Not official - maintained by https://launchpad.net/~shnatsel
 
 #See Debian instructions are the official method,
-#but if you use them you'll have to keep the installation up to date manually.
+#but in that case cjdns won't autostart on boot
+#and you'll have to keep the installation up to date manually.
 
 #Enter the following commands in Terminal:
 sudo add-apt-repository -y ppa:shnatsel/cjdns
