@@ -115,6 +115,7 @@ textdomain($domain);
 		<li><a href="#archlinux" class="lead" data-toggle="tab">Archlinux</a></li>
 		<li><a href="#fedora" class="lead" data-toggle="tab">Fedora</a></li>
 		<li><a href="#openwrt" class="lead" data-toggle="tab">OpenWRT</a></li>
+		<li><a href="#gentoo" class="lead" data-toggle="tab">Gentoo</a></li>
 
 
 		</ul>
@@ -221,6 +222,27 @@ echo 'src-git cjdns git://github.com/cjdelisle/cjdns-openwrt.git' >> ./feeds.con
 		</pre>
 		</div>
 
+                <div class="tab-pane fade in" id="gentoo">
+                <pre class="prettyprint">
+#Building cjdns with Gentoo Portage
+# created by @emery
+
+# Prepare layman and fetch overlay
+USE="git" emerge -u layman
+echo "source /var/lib/layman/make.conf" >> /etc/portage/make.conf
+layman -a emery
+
+# emerge cjdns
+emerge -avu cjdns
+
+# Start OpenRC service
+/etc/init.d/cjdns start
+
+# Start SystemD unit
+systemctl start cjdns
+                </pre>
+                </div>
+                  
 		</div>
 
 </div>
