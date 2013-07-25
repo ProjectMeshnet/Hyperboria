@@ -136,7 +136,7 @@ cd cjdns
 #and follow the instructions cjdroute prints.
 
 #To make cjdns autostart on boot:
-sed -ir "s|^#CJDPATH=.*$|CJDPATH=$(pwd)|" scripts/cjdns
+sed -ir "s|^#CJDPATH=.*$|CJDPATH=$(dirname $(pwd))|" scripts/cjdns
 sudo cp -i scripts/cjdns /etc/default/cjdns
 sudo cp -i scripts/cjdns.sh /etc/init.d/cjdns
 
