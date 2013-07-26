@@ -292,21 +292,5 @@ textdomain($domain);
 	  } );
 	}(jQuery))
 </script>
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
-
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.projectmeshnet.org/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", "10"]);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript>
-<img src="https://analytics.projectmeshnet.org/piwik.php?idsite=10&amp;rec=1" style="border:0" alt="" />
-</noscript>
 </body>
 </html>
