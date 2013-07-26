@@ -56,7 +56,6 @@ textdomain($domain);
 <li><a href="#">lang: <b>it</b></a></li>
 <li><a href="/?lang=ru_RU">lang: <b>Русский</b></a></li>
 <li><a href="#">lang: <b>fr</b></a></li>
-<li><a href="#">lang: <b>nl</b></a></li>
 </ul> -->
 </li>
 
