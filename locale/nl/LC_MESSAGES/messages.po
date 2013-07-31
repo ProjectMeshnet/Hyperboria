@@ -1,13 +1,12 @@
 # Hyperboria.net Dutch translation
 # Copyright (C) 2012 Project Meshnet
 # This file is distributed under the same license as the Hyperboria.net package.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: Hyperboria.net\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-09 03:20+0400\n"
-"PO-Revision-Date: 2013-07-25 17:37+0100\n"
+"PO-Revision-Date: 2013-07-26 11:35+0100\n"
 "Last-Translator: Bram De Vuyst <bramdevuyst@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,22 +14,135 @@ msgstr ""
 "Language-Team: \n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: index.php:80
+#: index.php:72
 msgid "a global meshnet"
-msgstr "een globaal meshnet"
+msgstr "Een globaal meshnet"
 
-#: index.php:45
+#: index.php:45 index.php:79 index.php:87
 msgid "Overview"
 msgstr "Overzicht"
 
 #: index.php:46
 msgid "How to join"
-msgstr "Hoe deelnemen"
+msgstr "Hoe verbinden"
 
-#: index.php:47
+#: index.php:47 index.php:130
 msgid "Services"
-msgstr "Diensten"
+msgstr "Services"
 
 #: index.php:48
 msgid "Social"
 msgstr "Sociaal"
+
+#: index.php:73
+msgid "powered by"
+msgstr "in werking gebracht door"
+
+#: index.php:73
+msgid "nodes"
+msgstr "nodes"
+
+#: index.php:89
+msgid "Encrypted networking for everyone."
+msgstr "Een veilig netwerk voor iedereen"
+
+#: index.php:90
+msgid "author"
+msgstr "auteur"
+
+#: index.php:97
+msgid "Open"
+msgstr "Open"
+
+#: index.php:98
+msgid "Anyone can join by peering with someone already connected."
+msgstr "Iedereen kan zich aansluiten door te verbinden met iemand die al verbonden is."
+
+#: index.php:102
+msgid "P2P"
+msgstr "P2P"
+
+#: index.php:103
+msgid "Inspired by Kademlia DHT, the network is censorship resistant."
+msgstr "Geïnspireerd door Kademlia DHT, het netwerk is censuur-resistent."
+
+#: index.php:107
+msgid "Secure"
+msgstr "Veilig"
+
+#: index.php:108
+msgid "Packets are encrypted end-to-end using your unique cjdns ipv6 address."
+msgstr "Pakketten zijn versleuteld door je unieke cjdns ipv6 adres."
+
+#: index.php:115
+msgid "How do I join?"
+msgstr "Hoe kan ik verbinden?"
+
+#: index.php:130
+msgid "A few popular websites and services available on the network."
+msgstr "Enkele bekende websites en services op het netwerk."
+
+#: index.php:138
+msgid "Websites"
+msgstr "Websites"
+
+#: index.php:146
+msgid "Website"
+msgstr "Website"
+
+#: index.php:147 index.php:199
+msgid "Description"
+msgstr "Beschrijving"
+
+#: index.php:154
+msgid "Uppit - a reddit powered community"
+msgstr "Uppit - een op-Reddit-gebaseerd community"
+
+#: index.php:164
+msgid "socialnode - a micro blogging service exclusive to Hyperboria"
+msgstr "Socialnode - een microblogging service voor Hyperboria"
+
+#: index.php:169
+msgid "iRcann - the info.cern.ch of Hyperboria"
+msgstr "iRcann - de info.cern.ch van Hyperboria"
+
+#: index.php:174
+msgid "NodeInfo - your flashlight in the darknet"
+msgstr "NodeInfo - je zaklamp in het Darknet"
+
+#: index.php:179
+msgid "view more websites"
+msgstr "Meer websites..."
+
+#: index.php:198
+msgid "Service"
+msgstr "Service"
+
+#: index.php:200
+msgid "Maintainer"
+msgstr "Beheerder"
+
+#: index.php:206
+msgid "OpenPGP Keyserver"
+msgstr "OpenPGP Keyserver"
+
+#: index.php:211
+msgid "Hyperboria.name - free mail and subdomain service"
+msgstr "Hyperboria.name - gratis mail en subdomein leverancier"
+
+#: index.php:216
+msgid "HypeBox.net - a blogging platform exclusive to Hyperboria"
+msgstr "HypeBox.net - een blogging platform speciaal voor Hyperboria"
+
+#: index.php:221
+msgid "HypeIRC - the IRC network of Hyperboria"
+msgstr "HypeIRC - het IRC netwerk van Hyperboria"
+
+#: index.php:226
+msgid "HypeDNS - dns for Hyperboria"
+msgstr "HypeDNS - dns voor Hyperboria"
+
+#: index.php:247
+msgid "Insight into #hyperboria, help spread the word!"
+msgstr "Maak #hyperboria bekend, deel het woord!"
+
