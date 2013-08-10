@@ -79,7 +79,7 @@ textdomain($domain);
 		<h1><?=_("Overview")?></h1>
 	</div>
 	<h2>Encrypted networking for everyone.</h2>
-	<p>Hyperboria is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentraliation at the core. Anyone can participate in the network by locating a peer that is already connected.</p>
+	<p>Hyperboria is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentralization at the core. Anyone can participate in the network by locating a peer that is already connected.</p>
 </div>
 <div id="overview" class="row visible-lg">
 <br><br>
@@ -90,7 +90,7 @@ textdomain($domain);
 		  <small>Caleb James Delisle <cite title="Source Title">(cjdns <?=_("author")?>)</cite></small>
 		</blockquote>
 	</div>
-	<p class="lead">Hyperboria is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentraliation at the core. Anyone can participate in the network by locating a peer that is already connected.</p>
+	<p class="lead">Hyperboria is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentralization at the core. Anyone can participate in the network by locating a peer that is already connected.</p>
 	<br><br><br>
 	<div class="col col-lg-2"></div>
 	<div class="col col-lg-2 text-center" style="background-image:url(assets/img/overview-open.png);width:215px;height:374px;padding-top:200px;">
