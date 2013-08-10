@@ -119,8 +119,9 @@ textdomain($domain);
 	</div>
 	<div class="col col-lg-8">
     <a href="https://github.com/cjdelisle/cjdns" class="btn btn-primary">Build cjdns from source (official instructions)</a><br><br>
-	<a href="https://wiki.projectmeshnet.org/Install_on_Ubuntu" class="btn btn-default">Ubuntu install guide (by thefinn93)</a><br><br>
-    <a href="https://wiki.projectmeshnet.org/Install_on_ArchLinux" class="btn btn-default">Archlinux install guide (by prurigro)</a>
+    <a href="https://wiki.projectmeshnet.org/Install_on_Ubuntu" class="btn btn-default">Ubuntu install guide (by thefinn93)</a><br><br>
+    <a href="https://wiki.projectmeshnet.org/Install_on_ArchLinux" class="btn btn-default">Archlinux install guide (by prurigro)</a><br><br>
+    <a href="https://wiki.projectmeshnet.org/Install_on_Gentoo" class="btn btn-default">Gentoo install guide (by emery)</a>
 	</div>
 </div>
 <div class="row visible-lg"><div class="col col-lg-12" style="height:100px;"><div class="col col-lg-4"></div><div class="col col-lg-4" style="padding-top:50px;"><hr></div></div></div>
